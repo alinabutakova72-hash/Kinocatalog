@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Кинокаталог — добавить фильм</title>
-<link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,46 +21,54 @@
 
   <main class="container">
     <h1>Добавить фильм</h1>
-    <p class="form-note">
-      На данном этапе форма не сохраняет данные: проверка JavaScript появится
-      в работе №2, отправка на сервер — в работе №3.
-    </p>
+    <p class="form-note">Заполните поля. После проверки появится предпросмотр.</p>
 
-    <form class="add-form" action="#" method="post">
+    <form class="add-form" id="add-form">
       <div class="form-group">
         <label for="title">Название фильма *</label>
-        <input type="text" id="title" name="title" required minlength="2" placeholder="Например, Начало">
+        <input type="text" id="title" name="title" placeholder="Например, Начало">
       </div>
 
       <div class="form-group">
         <label for="category">Жанр *</label>
-        <select id="category" name="category" required>
+        <select id="category" name="category">
           <option value="">— выберите жанр —</option>
-          <option value="fantasy">Фантастика</option>
-          <option value="drama">Драма</option>
-          <option value="comedy">Комедия</option>
-          <option value="thriller">Триллер</option>
+          <option value="1">Фантастика</option>
+          <option value="2">Драма</option>
+          <option value="3">Комедия</option>
         </select>
       </div>
 
       <div class="form-group">
         <label for="year">Год выпуска *</label>
-        <input type="number" id="year" name="year" required min="1900" max="2025" placeholder="2010">
+        <input type="number" id="year" name="year" placeholder="2010">
       </div>
 
       <div class="form-group">
         <label for="rating">Рейтинг (0–10)</label>
-        <input type="number" id="rating" name="rating" min="0" max="10" step="0.1" placeholder="8.8">
+        <input type="number" id="rating" name="rating" step="0.1" placeholder="8.8">
       </div>
 
       <div class="form-group">
         <label for="description">Описание *</label>
-        <textarea id="description" name="description" rows="5" required minlength="10"
-                  placeholder="Краткое описание сюжета фильма"></textarea>
+        <textarea id="description" name="description" rows="4" placeholder="Описание фильма"></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary">Добавить фильм</button>
     </form>
+
+    <div id="error-msg" style="color: #ef4444; margin-top: 15px; font-weight: bold; display: none;"></div>
+    
+    <div id="preview-container" style="display: none; margin-top: 30px; border-top: 1px solid #334155; padding-top: 20px;">
+      <h2>Предпросмотр записи:</h2>
+      <article class="movie-card" style="max-width: 400px; margin-top: 15px;">
+        <div class="movie-card-body">
+          <h2 id="preview-title"></h2>
+          <p class="movie-meta" id="preview-meta"></p>
+          <p id="preview-desc"></p>
+        </div>
+      </article>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -69,5 +76,9 @@
       <p>© 2025 Кинокаталог. Учебный проект по HTML и CSS.</p>
     </div>
   </footer>
+
+  <!-- Подключение скриптов (Лабораторная 2) -->
+  <script src="js/data.js"></script>
+  <script src="js/form.js"></script>
 </body>
 </html>
