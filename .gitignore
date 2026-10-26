@@ -1,0 +1,19 @@
+# Системные файлы
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Редакторы и IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Временные и лог-файлы
+*.log
+*.tmp
+
+# Node.js — понадобится в работах №2 и №3
+node_modules/
+npm-debug.log*
+.env

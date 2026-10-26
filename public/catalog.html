@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кинокаталог — каталог фильмов</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">🎬 Кинокаталог</a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="catalog.html" class="nav-link active">Каталог</a>
+        <a href="item.html" class="nav-link">Карточка фильма</a>
+        <a href="add.html" class="nav-link">Добавить фильм</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Каталог фильмов</h1>
+
+    <section class="filters-placeholder" aria-label="Поиск и фильтры">
+      <p>Здесь в следующих работах появятся поиск и фильтрация по жанру и году.</p>
+    </section>
+
+    <section class="catalog-grid" aria-label="Список фильмов">
+      <article class="movie-card">
+        <img src="https://via.placeholder.com/300x200?text=Inception" alt="Постер фильма «Начало»" class="movie-poster">
+        <div class="movie-card-body">
+          <h2>Начало</h2>
+          <p class="movie-meta">Фантастика · 2010 · 8.8</p>
+          <p>Профессиональный вор проникает в сны людей, чтобы украсть или внедрить идею.</p>
+          <a href="item.html" class="btn btn-secondary">Подробнее</a>
+        </div>
+      </article>
+
+      <article class="movie-card">
+        <img src="https://via.placeholder.com/300x200?text=Interstellar" alt="Постер фильма «Интерстеллар»" class="movie-poster">
+        <div class="movie-card-body">
+          <h2>Интерстеллар</h2>
+          <p class="movie-meta">Фантастика · 2014 · 8.6</p>
+          <p>Команда исследователей отправляется через червоточину в поисках нового дома для человечества.</p>
+          <a href="item.html" class="btn btn-secondary">Подробнее</a>
+        </div>
+      </article>
+
+      <article class="movie-card">
+        <img src="https://via.placeholder.com/300x200?text=The+Matrix" alt="Постер фильма «Матрица»" class="movie-poster">
+        <div class="movie-card-body">
+          <h2>Матрица</h2>
+          <p class="movie-meta">Фантастика · 1999 · 8.7</p>
+          <p>Хакер узнаёт, что окружающий мир — симуляция, и присоединяется к сопротивлению.</p>
+          <a href="item.html" class="btn btn-secondary">Подробнее</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Кинокаталог. Учебный проект по HTML и CSS.</p>
+    </div>
+  </footer>
+</body>
+</html>
